@@ -5,28 +5,34 @@ import javax.persistence.*;
 public class Movies {
 	@Id
 	@GeneratedValue
-	private int MovieId;
-	private String MovieName;
+	private int movieId;
+	private String movieName;
 	
 	public Movies() {
 		
 	}
 
+	public Movies(int movieId, String movieName) {
+		super();
+		this.movieId = movieId;
+		this.movieName = movieName;
+	}
+
 	public int getMovieId() {
-		return MovieId;
+		return movieId;
 	}
 
 	public void setMovieId(int movieId) {
-		MovieId = movieId;
+		this.movieId = movieId;
 	}
 
 	public String getMovieName() {
-		return MovieName;
+		return movieName;
 	}
 
 	public void setMovieName(String movieName) {
-		MovieName = movieName;
+		this.movieName = movieName;
 	}
-
+	
 	
 }

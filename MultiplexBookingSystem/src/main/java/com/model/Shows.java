@@ -1,71 +1,88 @@
 package com.model;
+
+
+import java.util.Date;
+
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Shows {
 	@Id
 	@GeneratedValue
-	private int ShowId;
-	private int HallId;
-	private int MovieId;
-	private int SlotNo;
-	private java.sql.Date FromDate;
-	private java.sql.Date ToDate;
+	private int showId;
+	@ManyToOne
+	private Hall hall;
+	@ManyToOne
+	private Movies movies;
+	private int slotNo;
+	@JsonFormat(pattern="dd-MM-yyyy")
+	private Date fromDate;
+	@JsonFormat(pattern="dd-MM-yyyy")
+	private Date toDate;
 	
 	public Shows() {
 		
 	}
 
+	public Shows(int showId, Hall hall, Movies movies, int slotNo, Date fromDate, Date toDate) {
+		super();
+		this.showId = showId;
+		this.hall = hall;
+		this.movies = movies;
+		this.slotNo = slotNo;
+		this.fromDate = fromDate;
+		this.toDate = toDate;
+	}
+
 	public int getShowId() {
-		return ShowId;
+		return showId;
 	}
 
 	public void setShowId(int showId) {
-		ShowId = showId;
+		this.showId = showId;
 	}
 
-	public int getHallId() {
-		return HallId;
+	public Hall getHall() {
+		return hall;
 	}
 
-	public void setHallId(int hallId) {
-		HallId = hallId;
+	public void setHall(Hall hall) {
+		this.hall = hall;
 	}
 
-	public int getMovieId() {
-		return MovieId;
+	public Movies getMovies() {
+		return movies;
 	}
 
-	public void setMovieId(int movieId) {
-		MovieId = movieId;
+	public void setMovies(Movies movies) {
+		this.movies = movies;
 	}
 
 	public int getSlotNo() {
-		return SlotNo;
+		return slotNo;
 	}
 
 	public void setSlotNo(int slotNo) {
-		SlotNo = slotNo;
+		this.slotNo = slotNo;
 	}
 
-	public java.sql.Date getFromDate() {
-		return FromDate;
+	public Date getFromDate() {
+		return fromDate;
 	}
 
-	public void setFromDate(java.sql.Date fromDate) {
-		FromDate = fromDate;
+	public void setFromDate(Date fromDate) {
+		this.fromDate = fromDate;
 	}
 
-	public java.sql.Date getToDate() {
-		return ToDate;
+	public Date getToDate() {
+		return toDate;
 	}
 
-	public void setToDate(java.sql.Date toDate) {
-		ToDate = toDate;
+	public void setToDate(Date toDate) {
+		this.toDate = toDate;
 	}
 
 	
-	
-	
-
 }

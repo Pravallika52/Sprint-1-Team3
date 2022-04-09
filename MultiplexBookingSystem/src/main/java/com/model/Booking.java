@@ -1,62 +1,77 @@
 package com.model;
 
+import java.util.Date;
+
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Booking {
 	@Id
 	@GeneratedValue
-	private int BookingId;
-	private int ShowId;
-	private int UserId;
-	private java.sql.Date BookedDate;
-	private java.sql.Date ShowDate;
+	private int bookingId;
+	@ManyToOne
+	private Shows shows;
+	@ManyToOne
+	private Users users;
+	@JsonFormat(pattern="dd-MM-yyyy")
+	private Date bookedDate;
+	@JsonFormat(pattern="dd-MM-yyyy")
+	private Date showDate;
 	
 	public Booking() {
 		
 	}
-
+	
+	public Booking(int bookingId, Shows shows, Users users, Date bookedDate, Date showDate) {
+		super();
+		this.bookingId = bookingId;
+		this.shows = shows;
+		this.users = users;
+		this.bookedDate = bookedDate;
+		this.showDate = showDate;
+	}
+	
 	public int getBookingId() {
-		return BookingId;
+		return bookingId;
 	}
-
+	
 	public void setBookingId(int bookingId) {
-		BookingId = bookingId;
+		this.bookingId = bookingId;
 	}
-
-	public int getShowId() {
-		return ShowId;
+	
+	public Shows getShows() {
+		return shows;
 	}
-
-	public void setShowId(int showId) {
-		ShowId = showId;
+	
+	public void setShows(Shows shows) {
+		this.shows = shows;
 	}
-
-	public int getUserId() {
-		return UserId;
+	
+	public Users getUsers() {
+		return users;
 	}
-
-	public void setUserId(int userId) {
-		UserId = userId;
+	
+	public void setUsers(Users users) {
+		this.users = users;
 	}
-
-	public java.sql.Date getBookedDate() {
-		return BookedDate;
+	
+	public Date getBookedDate() {
+		return bookedDate;
 	}
-
-	public void setBookedDate(java.sql.Date bookedDate) {
-		BookedDate = bookedDate;
+	
+	public void setBookedDate(Date bookedDate) {
+		this.bookedDate = bookedDate;
 	}
-
-	public java.sql.Date getShowDate() {
-		return ShowDate;
+	
+	public Date getShowDate() {
+		return showDate;
 	}
-
-	public void setShowDate(java.sql.Date showDate) {
-		ShowDate = showDate;
+	
+	public void setShowDate(Date showDate) {
+		this.showDate = showDate;
 	}
-
 	
 	
-
 }

@@ -5,37 +5,45 @@ import javax.persistence.*;
 public class Hall {
 	@Id
 	@GeneratedValue
-	private int HallId;
-	private String HallDesc;
-	private int TotalCapacity;
+	private int hallId;
+	private String hallDesc;
+	private int totalCapacity;
 	
 	public Hall() {
 		
 	}
 
+	public Hall(int hallId, String hallDesc, int totalCapacity) {
+		super();
+		this.hallId = hallId;
+		this.hallDesc = hallDesc;
+		this.totalCapacity = totalCapacity;
+	}
+
 	public int getHallId() {
-		return HallId;
+		return hallId;
 	}
 
 	public void setHallId(int hallId) {
-		HallId = hallId;
+		this.hallId = hallId;
 	}
 
 	public String getHallDesc() {
-		return HallDesc;
+		return hallDesc;
 	}
 
 	public void setHallDesc(String hallDesc) {
-		HallDesc = hallDesc;
+		this.hallDesc = hallDesc;
 	}
 
 	public int getTotalCapacity() {
-		return TotalCapacity;
+		return totalCapacity;
 	}
 
 	public void setTotalCapacity(int totalCapacity) {
-		TotalCapacity = totalCapacity;
+		this.totalCapacity = totalCapacity;
 	}
+
 	
 	
 

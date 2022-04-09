@@ -4,37 +4,59 @@ import javax.persistence.*;
 @Entity
 public class BookingDetails {
 	@Id
-	private int BookingId;
-	private int SeatTypeId;
-	private int NoofSeats;
+	@GeneratedValue
+	private int bookingDetailsId;
+	@ManyToOne
+	private Booking booking;
+	@ManyToOne
+	private SeatType seatType;
+	private int noofSeats;
 	
 	public BookingDetails() {
 		
 	}
-
-	public int getBookingId() {
-		return BookingId;
+	
+	public BookingDetails(int bookingDetailsId, Booking booking, SeatType seatType, int noofSeats) {
+		super();
+		this.bookingDetailsId = bookingDetailsId;
+		this.booking = booking;
+		this.seatType = seatType;
+		this.noofSeats = noofSeats;
 	}
 
-	public void setBookingId(int bookingId) {
-		BookingId = bookingId;
+	public int getBookingDetailsId() {
+		return bookingDetailsId;
 	}
 
-	public int getSeatTypeId() {
-		return SeatTypeId;
+	public void setBookingDetailsId(int bookingDetailsId) {
+		this.bookingDetailsId = bookingDetailsId;
 	}
 
-	public void setSeatTypeId(int seatTypeId) {
-		SeatTypeId = seatTypeId;
+	public Booking getBooking() {
+		return booking;
+	}
+
+	public void setBooking(Booking booking) {
+		this.booking = booking;
+	}
+
+	public SeatType getSeatType() {
+		return seatType;
+	}
+
+	public void setSeatType(SeatType seatType) {
+		this.seatType = seatType;
 	}
 
 	public int getNoofSeats() {
-		return NoofSeats;
+		return noofSeats;
 	}
 
 	public void setNoofSeats(int noofSeats) {
-		NoofSeats = noofSeats;
+		this.noofSeats = noofSeats;
 	}
+	
+	
 
 	
 }

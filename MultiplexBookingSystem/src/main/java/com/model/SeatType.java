@@ -5,38 +5,45 @@ import javax.persistence.*;
 public class SeatType {
 	@Id
 	@GeneratedValue
-	private int SeatTypeId;
-	private String SeatTypeDesc;
-	private float SeatFare;
+	private int seatTypeId;
+	private String seatTypeDesc;
+	private float seatFare;
 	
 	public SeatType() {
 		
 	}
 
+	public SeatType(int seatTypeId, String seatTypeDesc, float seatFare) {
+		super();
+		this.seatTypeId = seatTypeId;
+		this.seatTypeDesc = seatTypeDesc;
+		this.seatFare = seatFare;
+	}
+
 	public int getSeatTypeId() {
-		return SeatTypeId;
+		return seatTypeId;
 	}
 
 	public void setSeatTypeId(int seatTypeId) {
-		SeatTypeId = seatTypeId;
+		this.seatTypeId = seatTypeId;
 	}
 
 	public String getSeatTypeDesc() {
-		return SeatTypeDesc;
+		return seatTypeDesc;
 	}
 
 	public void setSeatTypeDesc(String seatTypeDesc) {
-		SeatTypeDesc = seatTypeDesc;
+		this.seatTypeDesc = seatTypeDesc;
 	}
 
 	public float getSeatFare() {
-		return SeatFare;
+		return seatFare;
 	}
 
 	public void setSeatFare(float seatFare) {
-		SeatFare = seatFare;
+		this.seatFare = seatFare;
 	}
-	
+
 	
 
 }
