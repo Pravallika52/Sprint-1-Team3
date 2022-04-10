@@ -7,3 +7,6 @@ import org.springframework.stereotype.Repository;
 public interface SeatTypeDAO extends CrudRepository<SeatType, Integer> {
 
 }
+
+
+	

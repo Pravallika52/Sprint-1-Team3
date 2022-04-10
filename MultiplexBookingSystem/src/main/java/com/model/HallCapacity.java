@@ -16,7 +16,8 @@ public class HallCapacity {
 		
 	}
 	
-	public HallCapacity(int hallCapacityId, Hall hall, SeatType seatType, int seatCount) {
+	public HallCapacity(int hallCapacityId, Hall hall,
+			SeatType seatType, int seatCount) {
 		super();
 		this.hallCapacityId = hallCapacityId;
 		this.hall = hall;
@@ -55,7 +56,15 @@ public class HallCapacity {
 	public void setSeatCount(int seatCount) {
 		this.seatCount = seatCount;
 	}
-	
-	
 
 }
+
+
+
+
+
+
+
+
+
+

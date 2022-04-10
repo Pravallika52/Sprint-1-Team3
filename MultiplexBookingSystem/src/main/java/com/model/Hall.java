@@ -44,7 +44,15 @@ public class Hall {
 		this.totalCapacity = totalCapacity;
 	}
 
-	
-	
-
 }
+
+
+
+
+
+
+
+
+
+
+

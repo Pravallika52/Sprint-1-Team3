@@ -13,7 +13,8 @@ public class SeatType {
 		
 	}
 
-	public SeatType(int seatTypeId, String seatTypeDesc, float seatFare) {
+	public SeatType(int seatTypeId, String seatTypeDesc,
+			float seatFare) {
 		super();
 		this.seatTypeId = seatTypeId;
 		this.seatTypeDesc = seatTypeDesc;
@@ -42,8 +43,24 @@ public class SeatType {
 
 	public void setSeatFare(float seatFare) {
 		this.seatFare = seatFare;
-	}
-
-	
+	}	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

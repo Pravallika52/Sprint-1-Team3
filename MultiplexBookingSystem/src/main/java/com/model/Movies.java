@@ -34,5 +34,5 @@ public class Movies {
 		this.movieName = movieName;
 	}
 	
-	
 }
+

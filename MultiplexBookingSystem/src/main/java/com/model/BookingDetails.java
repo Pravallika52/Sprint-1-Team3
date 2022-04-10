@@ -16,7 +16,8 @@ public class BookingDetails {
 		
 	}
 	
-	public BookingDetails(int bookingDetailsId, Booking booking, SeatType seatType, int noofSeats) {
+	public BookingDetails(int bookingDetailsId, Booking booking,
+			SeatType seatType, int noofSeats) {
 		super();
 		this.bookingDetailsId = bookingDetailsId;
 		this.booking = booking;
@@ -56,7 +57,13 @@ public class BookingDetails {
 		this.noofSeats = noofSeats;
 	}
 	
-	
-
-	
 }
+
+
+
+
+
+
+
+
+

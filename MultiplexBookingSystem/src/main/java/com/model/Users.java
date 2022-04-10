@@ -17,7 +17,7 @@ public class Users {
 	@Length(min=8,max=20)
 	private String userPassword;
 	@Length(min=8,max=20)
-	private String userConfirmPassword;
+	private String userConfirmPassword;	
 	private String userType;
 	
 	public Users() {
@@ -92,6 +92,22 @@ public class Users {
 		this.userType = userType;
 	}
 	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

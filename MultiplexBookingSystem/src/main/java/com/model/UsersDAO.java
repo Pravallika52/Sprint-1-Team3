@@ -11,3 +11,5 @@ public interface UsersDAO extends CrudRepository<Users, Integer> {
 	public Optional<Users> findByemailId(String emailId);
 
 }
+
+

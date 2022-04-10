@@ -7,3 +7,4 @@ import org.springframework.stereotype.Repository;
 public interface HallCapacityDAO extends CrudRepository<HallCapacity, Integer> {
 
 }
+

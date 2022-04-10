@@ -24,7 +24,8 @@ public class Booking {
 		
 	}
 	
-	public Booking(int bookingId, Shows shows, Users users, Date bookedDate, Date showDate) {
+	public Booking(int bookingId, Shows shows, Users users, 
+			Date bookedDate, Date showDate) {
 		super();
 		this.bookingId = bookingId;
 		this.shows = shows;
@@ -73,5 +74,5 @@ public class Booking {
 		this.showDate = showDate;
 	}
 	
-	
 }
+

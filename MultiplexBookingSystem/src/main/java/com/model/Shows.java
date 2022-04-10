@@ -1,10 +1,7 @@
 package com.model;
 
-
 import java.util.Date;
-
 import javax.persistence.*;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
@@ -26,7 +23,8 @@ public class Shows {
 		
 	}
 
-	public Shows(int showId, Hall hall, Movies movies, int slotNo, Date fromDate, Date toDate) {
+	public Shows(int showId, Hall hall, Movies movies, 
+			int slotNo, Date fromDate, Date toDate) {
 		super();
 		this.showId = showId;
 		this.hall = hall;
@@ -84,5 +82,5 @@ public class Shows {
 		this.toDate = toDate;
 	}
 
-	
 }
+
